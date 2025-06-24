@@ -1,0 +1,9 @@
+// controllers/authController.js
+const User = require("../models/user");
+const jwt = require("jsonwebtoken");
+
+exports.register = async (req, res) => {
+  const user = new User(req.body);
+  await user.save();
+  res.json({ message: "User registered" });
+};

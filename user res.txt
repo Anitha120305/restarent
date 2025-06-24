@@ -1,0 +1,5 @@
+// AuthForm.jsx
+const handleRegister = async (userData) => {
+  const response = await axios.post("/api/auth/register", userData);
+  // Store token in localStorage
+};
